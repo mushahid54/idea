@@ -1,0 +1,27 @@
+LOG:  database system was shut down at 2017-03-11 13:40:54 IST
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "solar_db" does not exist
+FATAL:  database "solar_db" does not exist
+FATAL:  database "/Users/OMAPALTECHNOLOGIES/Documents/new_project/solar/db.sqlite" does not exist
+FATAL:  database "/Users/OMAPALTECHNOLOGIES/Documents/new_project/solar/db.sqlite" does not exist
+FATAL:  role "my_database_user" does not exist
+ERROR:  relation "django_session" does not exist at character 109
+STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-03-11T08:24:06.326124+00:00'::timestamptz AND "django_session"."session_key" = 'i32d1ugbbr26nmu7g1mzcrescl1yn518')
+ERROR:  relation "django_session" does not exist at character 109
+STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-03-11T08:24:06.429203+00:00'::timestamptz AND "django_session"."session_key" = 'i32d1ugbbr26nmu7g1mzcrescl1yn518')
+ERROR:  relation "django_session" does not exist at character 109
+STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-03-11T08:24:06.433079+00:00'::timestamptz AND "django_session"."session_key" = 'i32d1ugbbr26nmu7g1mzcrescl1yn518')
+ERROR:  relation "django_session" does not exist at character 109
+STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-03-11T08:24:06.326124+00:00'::timestamptz AND "django_session"."session_key" = 'i32d1ugbbr26nmu7g1mzcrescl1yn518') LIMIT 21
+ERROR:  relation "django_session" does not exist at character 109
+STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" LIMIT 21
+ERROR:  relation "django_session" does not exist at character 109
+STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-03-11T08:24:06.326124+00:00'::timestamptz AND "django_session"."session_key" = 'i32d1ugbbr26nmu7g1mzcrescl1yn518') LIMIT 21
+ERROR:  relation "django_session" does not exist at character 109
+STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-03-11T08:24:06.326124+00:00'::timestamptz AND "django_session"."session_key" = 'i32d1ugbbr26nmu7g1mzcrescl1yn518') LIMIT 21
+ERROR:  relation "django_session" does not exist at character 109
+STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-03-11T08:24:06.326124+00:00'::timestamptz AND "django_session"."session_key" = 'i32d1ugbbr26nmu7g1mzcrescl1yn518') LIMIT 21
+ERROR:  relation "django_session" does not exist at character 109
+STATEMENT:  SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-03-11T08:24:06.470929+00:00'::timestamptz AND "django_session"."session_key" = 'i32d1ugbbr26nmu7g1mzcrescl1yn518')
