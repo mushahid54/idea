@@ -1,0 +1,12 @@
+*.DS_Store
+*.pyc
+__pycache__*
+.idea/*
+media/*
+solar/secrets.json
+dumps/*
+dumps_new/*
+staticfiles/*
+*.rdb
+*.ini
+/logfile
