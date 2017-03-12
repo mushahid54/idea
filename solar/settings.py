@@ -96,17 +96,27 @@ WSGI_APPLICATION = 'solar.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'solar_db',
-        'USER': 'OMAPALTECHNOLOGIES',
-        'PASSWORD': 'admin123',
-        'HOST': '127.0.0.1',
+        'NAME': 'd7s2uu51j56k1d',
+        'USER': 'mpvrzeugsrmqjb',
+        'PASSWORD': '32650dd659da2262260e30eafbd2c3c23af5afff38e04ae34781ecc07d06ea14',
+        'HOST': 'ec2-54-163-236-33.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'solar_db',
+#         'USER': 'OMAPALTECHNOLOGIES',
+#         'PASSWORD': 'admin123',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
