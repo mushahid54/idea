@@ -9,11 +9,33 @@ https://docs.djangoproject.com/en/1.10/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
-
+import json
+from pathlib import Path
 import os
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+from django.core.exceptions import ImproperlyConfigured
+
+BASE_DIR = Path(__file__).parents[2]  # project folder
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
+
+
+def get_secret(setting):
+    file_path = str(BASE_DIR / 'config' / 'settings' / 'secrets.json')
+    try:
+        with open(file_path) as file:
+            secrets = json.loads(file.read())
+            try:
+                return secrets[setting]
+            except KeyError:
+                error_message = "Set the {0} environment variable".format(setting)
+                raise ImproperlyConfigured(error_message)
+    except FileNotFoundError:
+        error_message = "secrets.json not found in settings folder"
+        raise ImproperlyConfigured(error_message)
 
 
 # Quick-start development settings - unsuitable for production
@@ -107,6 +129,14 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = get_secret("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = get_secret("EMAIL_HOST_PASSWORD")
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+SERVER_EMAIL = "testing@gmail.com"
 
 LANGUAGE_CODE = 'en-us'
 
