@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).parents[2]  # project folder
 
 
 def get_secret(setting):
-    file_path = str(BASE_DIR / 'solar' / 'solar' / 'secrets.json')
+    file_path = str(BASE_DIR / 'solar' / 'solar' / 'settings_secrets.json')
     try:
         with open(file_path) as file:
             secrets = json.loads(file.read())
@@ -34,7 +34,7 @@ def get_secret(setting):
                 error_message = "Set the {0} environment variable".format(setting)
                 raise ImproperlyConfigured(error_message)
     except FileNotFoundError:
-        error_message = "secrets.json not found in settings folder"
+        error_message = "settings_secrets.json not found in settings folder"
         raise ImproperlyConfigured(error_message)
 
 
