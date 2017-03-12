@@ -131,8 +131,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = get_secret("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = get_secret("EMAIL_HOST_PASSWORD")
+EMAIL_HOST_USER = "eynimumbaiindia@gmail.com",
+EMAIL_HOST_PASSWORD = "liomessi10"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
