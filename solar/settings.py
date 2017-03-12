@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).parents[2]  # project folder
 
 
 def get_secret(setting):
-    file_path = str(BASE_DIR / 'config' / 'settings' / 'secrets.json')
+    file_path = str(BASE_DIR / 'solar' / 'solar' / 'secrets.json')
     try:
         with open(file_path) as file:
             secrets = json.loads(file.read())
@@ -47,7 +47,7 @@ SECRET_KEY = '#iif#6@kv$psf9(91b8lby#(@f1axd7$=9!fiz6afopc&sq^y&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -151,5 +151,5 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-
+STATIC_ROOT = str(BASE_DIR  / 'static')
 STATIC_URL = '/static/'

@@ -2,7 +2,6 @@ from rest_framework import serializers
 from tracking.models import LiveSolarPowerData, SolarSystem
 
 
-
 class LiveSolarPowerDataSerializer(serializers.ModelSerializer):
     solar_system = serializers.SlugRelatedField(slug_field='solar_system_id', queryset=SolarSystem.objects.all())
     timestamp = serializers.DateTimeField(write_only=True)

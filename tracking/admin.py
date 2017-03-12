@@ -9,7 +9,7 @@ admin.site.register(SolarSystem, SolarSystemAdmin)
 
 
 class LiveSolarPowerDataAdmin(admin.ModelAdmin):
-    list_display = ('id', 'month', 'day', 'get_city',  'power')
+    list_display = ('id', 'month', 'day', 'hour', 'get_city', 'solar_system', 'power')
 
 admin.site.register(LiveSolarPowerData, LiveSolarPowerDataAdmin)
 
