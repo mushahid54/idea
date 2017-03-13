@@ -45,9 +45,9 @@ def get_secret(setting):
 SECRET_KEY = '#iif#6@kv$psf9(91b8lby#(@f1axd7$=9!fiz6afopc&sq^y&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['0.0.0.0', 'solartaskproject.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['0.0.0.0', 'oorjan.southindia.cloudapp.azure.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
