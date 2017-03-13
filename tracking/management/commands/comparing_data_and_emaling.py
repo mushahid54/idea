@@ -8,7 +8,7 @@ class Command(BaseCommand):
     help = "Comparing live and reference data hourly and emailing if live power_dc is less that 80 % of reference power_dc"
 
     def handle(self, *args, **options):
-        inspection_url = "http://127.0.0.1:8000/api/v1/tracking/solar_system/del_000001/power_inspection"
+        inspection_url = "http://oorjan.southindia.cloudapp.azure.com/api/v1/tracking/solar_system/del_000001/power_inspection"
         params = {
             "date": "02-02-2017"
         }
