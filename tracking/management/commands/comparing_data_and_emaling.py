@@ -7,7 +7,7 @@ class Command(BaseCommand):
     help = "Comparing live and reference data hourly and emailing if live power_dc is less that 80 % of reference power_dc"
 
     def handle(self, *args, **options):
-        inspection_url = "http://127.0.0.1:8000/api/v1/tracking/solar_system/del_000001/power_inspection"
+        inspection_url = "http://solartaskproject.herokuapp.com/api/v1/tracking/solar_system/del_000001/power_inspection"
         params = {
             "date": "02-02-2017"
         }
@@ -21,8 +21,8 @@ class Command(BaseCommand):
 
             html_content += "</table>"
 
-            subject, from_email, to = 'Testing Email', 'eynimumbaiindia@gmail.com', 'chitrankdixit@gmail.com'
-            text_content = 'Hey Please, find the email.'
+            subject, from_email, to = '"Daily report for 02-02-2017"', 'eynimumbaiindia@gmail.com', 'mushahidcs0054@gmail.com'
+            text_content = 'Hey please, find the email.'
             msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
             msg.attach_alternative(html_content, "text/html")
             msg.send()
