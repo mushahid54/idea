@@ -173,7 +173,7 @@ USE_TZ = True
 # STATIC_ROOT = str(BASE_DIR / 'solar' / 'staticfiles')
 GRAPPELLI_ADMIN_TITLE = "OORJAN BACKEND ADMIN"
 
-STATIC_ROOT = str(BASE_DIR / 'solar' / 'staticfiles')
+STATIC_ROOT = str(BASE_DIR / 'oorjan-task' / 'staticfiles')
 
 STATIC_URL = '/static/'
 
