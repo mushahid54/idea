@@ -1,7 +1,11 @@
 from django.core.mail import send_mail, EmailMultiAlternatives
 from django.core.management import BaseCommand
 import requests
-from django.core.mail import EmailMessage
+import smtplib
+import base64
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+#from django.core.mail import EmailMessage
 
 
 class Command(BaseCommand):
@@ -13,8 +17,12 @@ class Command(BaseCommand):
             "date": "02-02-2017"
         }
         response = requests.get(url=inspection_url, params=params)
-        import pdb;pdb.set_trace()
+
         if response.status_code == 200 and response.json().__len__() > 0:
+            sender = 'eynimumbaiindia@gmail.com'
+            reciever = 'mushahidcs0054@gmail.com'
+            message = MIMEMultipart('alternative')
+            message['Subject'] = "Find the detail for 02-02-2017 "
             html_content = "<table broder=\"1\"><tr><th>S.No</th><th>hour</th><th>reference_hour</th><th>reference_power_dc</th><th>live_power_dc</th></tr>"
 
             for counter,element in enumerate(response.json()):
@@ -22,11 +30,22 @@ class Command(BaseCommand):
 
             html_content += "</table>"
 
-            subject, from_email, to = '"Daily report for 02-02-2017"', 'eynimumbaiindia@gmail.com', 'mushahidcs0054@gmail.com'
-            text_content = 'Hey please, find the email.'
-            msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
-            msg.attach_alternative(html_content, "text/html")
-            msg.send()
+            try:
+               smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
+               smtpObj.starttls()
+               smtpObj.login('eynimumbaiindia@gmail.com', 'liomessi10')
+               email_body = MIMEText(html_content, 'html')
+               message.attach(email_body)
+               smtpObj.sendmail(sender, reciever, message.as_string())
+            except Exception:
+               print ("Error: unable to send email")
+            #
+            # subject, from_email, to = 'Daily report for 02-02-2017', 'eynimumbaiindia@gmail.com', 'mushahidcs0054@gmail.com'
+            # text_content = 'Hey please, find the email.'
+            #msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+            # #msg.add_header('Content-Transfer-Encoding')
+            # msg.attach_alternative(html_content, "text/html")
+            # msg.send()
 
 
 
