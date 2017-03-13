@@ -169,8 +169,8 @@ USE_TZ = True
 #     str(BASE_DIR / "/solar" / " solar" / "static"),
 #     # '/var/www/static/',
 # )
-# STATIC_ROOT = str(BASE_DIR / 'staticfiles')
+# STATIC_ROOT = str(BASE_DIR / 'solar' / 'staticfiles')
 
-STATIC_ROOT = str(BASE_DIR / 'staticfiles')
+STATIC_ROOT = str(BASE_DIR / 'solar' / 'staticfiles')
 
 STATIC_URL = '/static/'
