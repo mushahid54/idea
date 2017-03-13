@@ -174,3 +174,5 @@ USE_TZ = True
 STATIC_ROOT = str(BASE_DIR / 'solar' / 'staticfiles')
 
 STATIC_URL = '/static/'
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
