@@ -53,13 +53,15 @@ ALLOWED_HOSTS = ['0.0.0.0', 'solartaskproject.herokuapp.com', 'localhost', '127.
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tracking',
+    'grappelli',
+    'django.contrib.admin',
 ]
 
 MIDDLEWARE = [

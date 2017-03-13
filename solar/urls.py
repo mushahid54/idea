@@ -21,7 +21,8 @@ router = routers.DefaultRouter()
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^api/v1/', include('tracking.urls', namespace='tracking'))
+    url(r'^api/v1/', include('tracking.urls', namespace='tracking')),
+    url(r'^grappelli/', include('grappelli.urls')),
 ]
 
 # if settings.DEBUG:
