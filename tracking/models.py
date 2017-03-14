@@ -4,6 +4,9 @@ from django.db import models
 
 
 class SolarSystem(models.Model):
+    """
+      Solar System
+    """
     solar_system_id = models.CharField(max_length=50, unique=True)
     capacity = models.FloatField()
     city = models.CharField(max_length=50)
