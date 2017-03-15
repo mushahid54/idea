@@ -20,7 +20,7 @@ class Command(BaseCommand):
 
         if response.status_code == 200 and response.json().__len__() > 0:
             sender = 'eynimumbaiindia@gmail.com'
-            reciever = 'mushahidcs0054@gmail.com'
+            reciever = 'keshav@oorjan.com'
             message = MIMEMultipart('alternative')
             message['Subject'] = "Find the detail for 02-02-2017 "
             html_content = "<table broder=\"1\"><tr><th>S.No</th><th>hour</th><th>reference_hour</th><th>reference_power_dc</th><th>live_power_dc</th></tr>"
